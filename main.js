@@ -17,7 +17,8 @@ window.addEventListener('load', function(){
     selectAudioBtn.addEventListener('click', function() {
 
     const audio1 = document.getElementById("audio1");
-      audio1.src = 'https://github.com/iamsuryansh/audioVisualizer/blob/master/audioSamples/' + document.getElementById("mySelect").value + '.mp3';
+      audio1.src = 'preview.wav';
+      //+ document.getElementById("mySelect").value + '.mp3';
       audio1.play();
       const audioContext = new AudioContext();
       console.log(audioSource)
