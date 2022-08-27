@@ -1,6 +1,10 @@
+function myFunction() {
+  var x = document.getElementById("mySelect").value;
+  document.getElementById("demo").innerHTML = x;
+}
 window.addEventListener('load', function(){
     const container = document.getElementById("container");
-    const animateButton = document.getElementById("play-btn");
+    const selectAudioBtn = document.getElementById("selectAudio");
     const canvas = document.getElementById("canvas1");
     
   
@@ -9,10 +13,11 @@ window.addEventListener('load', function(){
     const ctx = canvas.getContext("2d");
     let audioSource;
     let analyser;
-    container.addEventListener('click', function() {
+
+    selectAudioBtn.addEventListener('click', function() {
 
     const audio1 = document.getElementById("audio1");
-      audio1.src = "./preview.wav"
+      audio1.src = './audioSamples/' + document.getElementById("mySelect").value + '.mp3';
       audio1.play();
       const audioContext = new AudioContext();
       console.log(audioSource)

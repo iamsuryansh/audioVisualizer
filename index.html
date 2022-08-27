@@ -4,9 +4,31 @@
 </head>
 
 <body>  
+
+	<div id="audioSelect">
+
+		<form>
+			Select your favorite fruit:
+			<select id="mySelect">
+				<option value="Sample-3s">Sample-3s</option>
+				<option value="Sample-6s">Sample-6s</option>
+				<option value="Sample-9s">Sample-9s</option>
+				<option value="Sample-12s">Sample-12s</option>
+				<option value="Sample-15s">Sample-15s</option>
+			</select>
+		</form>
+
+		<p>Click the button to return the value of the selected fruit.</p>
+
+		<button type="button" id="selectAudio">Try it</button>
+
+		<p id="demo"></p>
+
+	</div>
+
 	<div id="container">
       	<canvas id="canvas1"></canvas>
-		<audio src="preview.wav" id="audio1" controls>audio element not supported</audio>
+		<audio src="preview.wav" id="audio1" controls loop>audio element not supported</audio>
   	</div>
 
 	<script src="main.js"></script>
