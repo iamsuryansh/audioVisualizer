@@ -1,23 +1,43 @@
-function myFunction() {
-  var x = document.getElementById("mySelect").value;
-  document.getElementById("demo").innerHTML = x;
-}
 window.addEventListener('load', function(){
-    // const container = document.getElementById("container");
-    const selectAudioBtn = document.getElementById("selectAudio");
     const canvas = document.getElementById("canvas1");
-    
-  
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     const ctx = canvas.getContext("2d");
+    const selectAudioBtn1 = this.document.getElementById("selectAudioBtn");
     let audioSource;
     let analyser;
 
-    selectAudioBtn.addEventListener('click', function() {
+    const btn1 = document.getElementById("btn-1");
+    const btn2 = document.getElementById("btn-2");
+    const btn3 = document.getElementById("btn-3");
+    const btn4 = document.getElementById("btn-4");
+    const btn5 = document.getElementById("btn-5");
+
+
+    btn1.addEventListener('click', function() {
+      document.getElementById("demo").innerHTML = "sample-3s";
+    });
+
+    btn2.addEventListener('click', function() {
+      document.getElementById("demo").innerHTML = "sample-9s";
+    });
+
+    btn3.addEventListener('click', function() {
+      document.getElementById("demo").innerHTML = "sample-6s";
+    });
+
+    btn4.addEventListener('click', function() {
+      document.getElementById("demo").innerHTML = "sample-12s";
+    });
+
+    btn5.addEventListener('click', function() {
+      document.getElementById("demo").innerHTML = "sample-15s";
+    });
+
+    selectAudioBtn1.addEventListener('click', function() {
 
     const audio1 = document.getElementById("audio1");
-      audio1.src = 'audioSamples/' + document.getElementById("mySelect").value + '.mp3';
+      audio1.src = 'audioSamples/' + document.getElementById("demo").innerHTML + '.mp3';
       audio1.play();
       const audioContext = new AudioContext();
       console.log(audioSource)
