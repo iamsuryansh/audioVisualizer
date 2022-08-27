@@ -3,7 +3,7 @@ function myFunction() {
   document.getElementById("demo").innerHTML = x;
 }
 window.addEventListener('load', function(){
-    const container = document.getElementById("container");
+    // const container = document.getElementById("container");
     const selectAudioBtn = document.getElementById("selectAudio");
     const canvas = document.getElementById("canvas1");
     
